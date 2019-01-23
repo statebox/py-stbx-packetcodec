@@ -1,0 +1,34 @@
+syntax = "proto2";
+
+message Diagram {
+    required string name = 1;
+    required int32 width = 2;
+    repeated int32 pixels = 3;
+    repeated string names = 4;
+}
+
+message Net {
+    required string name = 1;
+    repeated int32 partition = 2;
+    repeated string names = 3;
+    repeated string placeNames = 4;
+}
+
+message Wiring {
+    repeated Net nets = 1;
+    repeated Diagram diagrams = 2;
+    repeated int32 labels = 3;
+}
+
+message Firing {
+    optional bytes execution = 1;
+    repeated int32 path = 2;
+    optional bytes message = 3;
+}
+
+// wiring or firing
+message Transaction {
+    required bytes previous = 1;
+    optional Firing firing = 2;
+    optional Wiring wiring = 3;
+}
