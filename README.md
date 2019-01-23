@@ -1,5 +1,9 @@
 # Statebox Transaction Encoder
 
+## API
+
+- `makeFiringTransaction(previousHash, executionHash, messageHex, transition)`
+
 ## Rebuild the protocol buffer file
 
 The `statebox.proto` file defines the transaction format; `statebox_pb2.py` is generated from it.
