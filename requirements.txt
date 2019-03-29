@@ -1,1 +1,3 @@
 protobuf
+py-multibase
+py-multihash
