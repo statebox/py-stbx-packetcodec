@@ -1,4 +1,4 @@
-# Statebox Transaction Encoder
+# Statebox Python library
 
 ## Usage
 
