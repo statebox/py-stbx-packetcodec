@@ -26,9 +26,14 @@ message Firing {
     optional bytes message = 3;
 }
 
+message Root {
+    required bytes message = 1;
+}
+
 // wiring or firing
 message Transaction {
     required bytes previous = 1;
     optional Firing firing = 2;
     optional Wiring wiring = 3;
+    optional Root root = 4;
 }
