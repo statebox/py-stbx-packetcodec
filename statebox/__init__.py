@@ -1,5 +1,5 @@
 # for the tx codec
-import statebox_pb2 as stbx
+import statebox.statebox_pb2 as stbx
 import binascii
 
 # for hashing & buffer<=>string conversion
@@ -39,16 +39,29 @@ def hashB(buf):
     mh = multihash.encode(d, BLAKE2s224)
     return mh
 
+def hashHex(hexString):
+    b = binascii.a2b_hex(hexString)
+    mb = hashB(b)
+    return encode(mb)
+
 def makeFiringTransaction(previousHash, executionHash, messageHex, transition):
+    executionBuf = None;
+    if (executionHash and (executionHash != b"")):
+        executionBuf = decode(executionHash)
     # construct transaction from these parameters
     tx = stbx.Transaction(
-        previous = binascii.a2b_hex(previousHash),
+        previous = decode(previousHash),
         firing = stbx.Firing(
-            execution = binascii.a2b_hex(executionHash),
-            message = binascii.a2b_hex(messageHex),
+            execution = (executionBuf and executionBuf or None),
+            message = (messageHex and binascii.a2b_hex(messageHex) or None),
             path = [transition]
         )
     )
     encoded = tx.SerializeToString() # protocol buffer output (bytes)
-    return binascii.b2a_hex(encoded) # convert to hex string
+    return binascii.b2a_hex(encoded).decode('ascii') # convert to hex string
 
+# decoding is not needed, as for now the APi takes care of this
+# def decodeTx(txHex):
+#     encoded = binascii.a2b_hex(txHex)
+#     decoded = stbx.Transaction.FromString(encoded)
+#     print(decoded)

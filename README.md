@@ -147,6 +147,6 @@ The `statebox.proto` file defines the transaction format; `statebox_pb2.py` is g
 If you change `statebox.proto`, run the protocol buffer compiler to generate the `_pb2.py` file
 
 ```
-protoc statebox.proto --python_out=.
+protoc statebox.proto --python_out=statebox
 ```
 

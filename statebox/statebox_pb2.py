@@ -7,7 +7,6 @@ from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
 from google.protobuf import reflection as _reflection
 from google.protobuf import symbol_database as _symbol_database
-from google.protobuf import descriptor_pb2
 # @@protoc_insertion_point(imports)
 
 _sym_db = _symbol_database.Default()
@@ -19,7 +18,8 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='statebox.proto',
   package='',
   syntax='proto2',
-  serialized_pb=_b('\n\x0estatebox.proto\"E\n\x07\x44iagram\x12\x0c\n\x04name\x18\x01 \x02(\t\x12\r\n\x05width\x18\x02 \x02(\x05\x12\x0e\n\x06pixels\x18\x03 \x03(\x05\x12\r\n\x05names\x18\x04 \x03(\t\"I\n\x03Net\x12\x0c\n\x04name\x18\x01 \x02(\t\x12\x11\n\tpartition\x18\x02 \x03(\x05\x12\r\n\x05names\x18\x03 \x03(\t\x12\x12\n\nplaceNames\x18\x04 \x03(\t\"H\n\x06Wiring\x12\x12\n\x04nets\x18\x01 \x03(\x0b\x32\x04.Net\x12\x1a\n\x08\x64iagrams\x18\x02 \x03(\x0b\x32\x08.Diagram\x12\x0e\n\x06labels\x18\x03 \x03(\x05\":\n\x06\x46iring\x12\x11\n\texecution\x18\x01 \x01(\x0c\x12\x0c\n\x04path\x18\x02 \x03(\x05\x12\x0f\n\x07message\x18\x03 \x01(\x0c\"Q\n\x0bTransaction\x12\x10\n\x08previous\x18\x01 \x02(\x0c\x12\x17\n\x06\x66iring\x18\x02 \x01(\x0b\x32\x07.Firing\x12\x17\n\x06wiring\x18\x03 \x01(\x0b\x32\x07.Wiring')
+  serialized_options=None,
+  serialized_pb=_b('\n\x0estatebox.proto\"E\n\x07\x44iagram\x12\x0c\n\x04name\x18\x01 \x02(\t\x12\r\n\x05width\x18\x02 \x02(\x05\x12\x0e\n\x06pixels\x18\x03 \x03(\x05\x12\r\n\x05names\x18\x04 \x03(\t\"I\n\x03Net\x12\x0c\n\x04name\x18\x01 \x02(\t\x12\x11\n\tpartition\x18\x02 \x03(\x05\x12\r\n\x05names\x18\x03 \x03(\t\x12\x12\n\nplaceNames\x18\x04 \x03(\t\"H\n\x06Wiring\x12\x12\n\x04nets\x18\x01 \x03(\x0b\x32\x04.Net\x12\x1a\n\x08\x64iagrams\x18\x02 \x03(\x0b\x32\x08.Diagram\x12\x0e\n\x06labels\x18\x03 \x03(\x05\":\n\x06\x46iring\x12\x11\n\texecution\x18\x01 \x01(\x0c\x12\x0c\n\x04path\x18\x02 \x03(\x05\x12\x0f\n\x07message\x18\x03 \x01(\x0c\"\x17\n\x04Root\x12\x0f\n\x07message\x18\x01 \x02(\x0c\"f\n\x0bTransaction\x12\x10\n\x08previous\x18\x01 \x02(\x0c\x12\x17\n\x06\x66iring\x18\x02 \x01(\x0b\x32\x07.Firing\x12\x17\n\x06wiring\x18\x03 \x01(\x0b\x32\x07.Wiring\x12\x13\n\x04root\x18\x04 \x01(\x0b\x32\x05.Root')
 )
 
 
@@ -38,35 +38,35 @@ _DIAGRAM = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='width', full_name='Diagram.width', index=1,
       number=2, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='pixels', full_name='Diagram.pixels', index=2,
       number=3, type=5, cpp_type=1, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='names', full_name='Diagram.names', index=3,
       number=4, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
@@ -90,35 +90,35 @@ _NET = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='partition', full_name='Net.partition', index=1,
       number=2, type=5, cpp_type=1, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='names', full_name='Net.names', index=2,
       number=3, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='placeNames', full_name='Net.placeNames', index=3,
       number=4, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
@@ -142,28 +142,28 @@ _WIRING = _descriptor.Descriptor(
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='diagrams', full_name='Wiring.diagrams', index=1,
       number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='labels', full_name='Wiring.labels', index=2,
       number=3, type=5, cpp_type=1, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
@@ -187,28 +187,28 @@ _FIRING = _descriptor.Descriptor(
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='path', full_name='Firing.path', index=1,
       number=2, type=5, cpp_type=1, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='message', full_name='Firing.message', index=2,
       number=3, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
@@ -216,6 +216,37 @@ _FIRING = _descriptor.Descriptor(
   ],
   serialized_start=238,
   serialized_end=296,
+)
+
+
+_ROOT = _descriptor.Descriptor(
+  name='Root',
+  full_name='Root',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='message', full_name='Root.message', index=0,
+      number=1, type=12, cpp_type=9, label=2,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=298,
+  serialized_end=321,
 )
 
 
@@ -232,45 +263,54 @@ _TRANSACTION = _descriptor.Descriptor(
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='firing', full_name='Transaction.firing', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='wiring', full_name='Transaction.wiring', index=2,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='root', full_name='Transaction.root', index=3,
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=298,
-  serialized_end=379,
+  serialized_start=323,
+  serialized_end=425,
 )
 
 _WIRING.fields_by_name['nets'].message_type = _NET
 _WIRING.fields_by_name['diagrams'].message_type = _DIAGRAM
 _TRANSACTION.fields_by_name['firing'].message_type = _FIRING
 _TRANSACTION.fields_by_name['wiring'].message_type = _WIRING
+_TRANSACTION.fields_by_name['root'].message_type = _ROOT
 DESCRIPTOR.message_types_by_name['Diagram'] = _DIAGRAM
 DESCRIPTOR.message_types_by_name['Net'] = _NET
 DESCRIPTOR.message_types_by_name['Wiring'] = _WIRING
 DESCRIPTOR.message_types_by_name['Firing'] = _FIRING
+DESCRIPTOR.message_types_by_name['Root'] = _ROOT
 DESCRIPTOR.message_types_by_name['Transaction'] = _TRANSACTION
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -301,6 +341,13 @@ Firing = _reflection.GeneratedProtocolMessageType('Firing', (_message.Message,),
   # @@protoc_insertion_point(class_scope:Firing)
   ))
 _sym_db.RegisterMessage(Firing)
+
+Root = _reflection.GeneratedProtocolMessageType('Root', (_message.Message,), dict(
+  DESCRIPTOR = _ROOT,
+  __module__ = 'statebox_pb2'
+  # @@protoc_insertion_point(class_scope:Root)
+  ))
+_sym_db.RegisterMessage(Root)
 
 Transaction = _reflection.GeneratedProtocolMessageType('Transaction', (_message.Message,), dict(
   DESCRIPTOR = _TRANSACTION,
