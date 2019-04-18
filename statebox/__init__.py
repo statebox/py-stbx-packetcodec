@@ -65,3 +65,28 @@ def makeFiringTransaction(previousHash, executionHash, messageHex, transition):
 #     encoded = binascii.a2b_hex(txHex)
 #     decoded = stbx.Transaction.FromString(encoded)
 #     print(decoded)
+
+import requests
+
+def publish(apiBaseUrl, txHex, executionId=None):
+    reply = requests.post(apiBaseUrl, json={'tx': txHex}).json()
+    ok = (reply['status'] == 'ok')
+    if ok:
+        return Execution(reply, executionId)
+    else:
+        raise InvalidRequest(reply)
+
+class InvalidRequest(Exception):
+    def __init__(self, reply):
+        super(InvalidRequest, self).__init__(reply['message'])
+        self.status = reply['status']
+        if (reply['status'] == 'failed'):
+                self.data = reply['data']
+                self.code = reply['code']
+
+class Execution:
+    def __init__(self, reply, executionId=None):
+        hash = reply['hash']
+        self.executionId = executionId or hash
+        self.stateHash = hash
+        self.enabled = reply['enabled']
